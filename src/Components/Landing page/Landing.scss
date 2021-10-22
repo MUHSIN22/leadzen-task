@@ -1,0 +1,205 @@
+@import "/src/StyleAssets/variable";
+.landing-page{
+    background: $bg-primary;
+    padding: 1rem;
+    padding-top: 5rem;
+    .landing-page-wrapper{
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "content-section image-section"; 
+        margin-top: 2.5rem;
+        padding-bottom: 5rem;
+    }
+    .landing-text-content{
+        grid-area: content-section;
+        display: flex;
+        flex-direction: column;
+        color: $text-dark;
+    }
+    .landing-title {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 57.6px;
+        letter-spacing: .3px;
+    }
+    .landing-paragraph {
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 24px;
+        letter-spacing: .9px;
+        margin: 1rem 0;
+    }
+    .demo-details-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 31rem;
+    }
+    //*********** Landing image section
+    .landing-image-section{
+        grid-area: image-section;
+        position: relative;
+        display: grid;
+    }
+    .rocket-image{
+        width: 90%;
+        margin: auto;
+        animation: rocket-movement 3s linear 0s infinite;
+    }
+    .flash-image,
+    .cloud-image{
+        height: 5rem;
+        position: absolute;
+        animation: zoom-in-and-out 1s linear 0s infinite;
+    }
+    .cloud-image{
+        top: 12%;
+        left: 7%;
+        animation: cloud-movement 3s linear 0s infinite ;
+    }
+    .first-flash{
+        top: 39%;
+        left: 27%;
+        height: 6rem;
+    }
+    .second-flash{
+        top: 12%;
+        right: 1%;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .landing-page{
+        .landing-title {
+            font-size: 30px;
+        }
+        .landing-paragraph{
+            font-size: 14px;
+        }
+    }
+}
+@media only screen and (max-width: 800px) {
+    .landing-page{
+        .landing-text-content{
+            margin-top: 2.5rem;
+        }
+        .landing-page-wrapper{
+            grid-template-columns: 1fr;
+            grid-template-areas: "image-section"
+                                 "content-section";
+                                 
+        }
+        .landing-image-section{
+            padding-right: 3rem;
+        }
+        .rocket-image {
+            width: 65%;
+            margin: auto;
+        }
+        .flash-image, 
+        .cloud-image {
+            height: 4rem;
+            position: absolute;
+        }
+        .second-flash{
+            height: 5rem;
+            right: 10%;
+        }
+        .cloud-image {
+            top: -6%;
+            left: 14%;
+        }
+        .first-flash {
+            top: 30%;
+            left: 25%;
+        }
+        .landing-text-content {
+            align-items: center;
+        }
+        .landing-paragraph {
+            text-align: center;
+        }
+        .demo-landing{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .demo-details-section {
+            justify-content: center;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .landing-page{
+        .landing-image-section {
+            padding-right: 1rem;
+        }
+        .second-flash {
+            height: 3rem;
+            right: 6%;
+        }
+        .first-flash{
+            height: 3rem;
+            left: 17%;
+        }
+        .cloud-image{
+            height: 3rem;
+            left: 9%;
+        }
+        .rocket-image {
+            width: 78%;
+        }
+        .demo-details-card {
+            width: calc(50% - 1rem);
+        }
+        .landing-paragraph {
+            font-size: 10px;
+            margin: 0;
+            line-height: 18px;
+        }
+        .landing-title {
+            font-size: 23px;
+        }
+        .demo-card-content {
+            font-size: 12px;
+        }
+    }
+}
+
+// Animations
+@keyframes cloud-movement {
+        0%{
+            transform: translateX(0);
+        }50%{
+            transform: translate(50%,-25%) scale(1.1);
+        }100%{
+            transform: translate(0,0) scale(1);
+        }
+}
+@keyframes rocket-movement {
+    0%{
+        transform: translateY(0);
+    }25%{
+        transform: translateY(5%) rotate(5deg);
+    }50%{
+        transform: translateY(10%);
+    }75%{
+        transform: translateY(5%) rotate(0deg);
+    }100%{
+        transform: translateY(0);
+    }
+}
+@keyframes zoom-in-and-out {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.2);
+    }100%{
+        transform: scale(1)
+    }
+}

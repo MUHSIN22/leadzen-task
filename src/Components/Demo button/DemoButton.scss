@@ -1,0 +1,20 @@
+// colors using
+$btn-brown : #5f3819;
+
+.btn-demo {
+	font-weight: 500;
+	text-transform: capitalize;
+	background-color: $btn-brown;
+    font-size: 17px;
+	border-radius: 43px 0 43px 43px;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 2rem;
+    margin: 1rem 0;
+    width: max-content;
+}
+@media only screen and (max-width: 1100px) {
+    .btn-demo{
+        font-size: 14px;
+    }
+}

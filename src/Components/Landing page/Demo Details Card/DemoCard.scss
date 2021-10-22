@@ -1,0 +1,51 @@
+@import "/src/StyleAssets/variable";
+
+.demo-details-card {
+	background: #fff;
+	padding: 1.5rem;
+	width: 11rem;
+	height: 8rem;
+	position: relative;
+	margin: auto;
+	margin-top: 3rem;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+
+    .card-image-wrapper {
+        background: $bg-primary;
+        position: absolute;
+        top: -1.5rem;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        border-radius: 8px;
+        box-shadow: 0px -2px 16px rgba(0,0,0,0.1);
+        height: 3rem;
+        width: 3rem;
+        display: grid;
+        place-items: center;
+        color: #fff;
+    }
+    .demo-card-content{
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 1.2em;
+        letter-spacing: .5px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:1100px) {
+    .demo-details-card{
+        width: 8rem;
+        height: 7rem;
+        .demo-card-content{
+            font-size: 14px;
+        }
+    }
+}
+@media only screen and (max-width: 800px){
+    .demo-details-card{
+        width: calc(100%/2 - 2rem)
+    }
+}
