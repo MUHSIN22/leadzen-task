@@ -9,12 +9,30 @@ $btn-brown : #5f3819;
 	border-radius: 43px 0 43px 43px;
     color: #fff;
     border: none;
-    padding: 0.6rem 2rem;
+    padding: 0.7rem 2rem;
     margin: 1rem 0;
     width: max-content;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &:hover{
+        background: #fff;
+        color: $btn-brown;
+        animation: zoom-in-out 1s ease 0s infinite;
+    }
 }
 @media only screen and (max-width: 1100px) {
     .btn-demo{
         font-size: 14px;
+    }
+}
+
+// Animation
+@keyframes zoom-in-out {
+    0%{
+        transform: scale(1)
+    }50%{
+        transform: scale(1.1)
+    }100%{
+        transform: scale(1);
     }
 }
