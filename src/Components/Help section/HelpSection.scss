@@ -1,0 +1,58 @@
+@import '/src/StyleAssets/variable';
+.help-section{
+    .help-btn-wrapper{
+        max-width: 1300px;
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        margin-top: 1rem;
+        .btn-help{
+            border: 1px solid rgba(0,0,0,1);
+            border-radius: 5px;
+            width: calc(100%/5 - 3rem);
+            padding: 0.8rem;
+            font-size: 19px;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            &:hover{
+                background: $bg-primary;
+                border-color: $bg-primary;
+                color: #fff;
+            }
+        }
+    }
+    ul{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .help-section{
+        .help-btn-wrapper{
+            .btn-help{
+                width: calc(100%/4 - 2rem);
+            }
+        }   
+    } 
+}
+@media only screen and (max-width:800px) {
+    .help-section{
+        .help-btn-wrapper{
+            display: none;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        .help-slide-dot{
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            margin: 0.2rem;
+            background: #000;
+        }
+    }
+}
