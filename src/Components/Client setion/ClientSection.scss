@@ -1,0 +1,130 @@
+@import '/src/StyleAssets/mixins';
+@import '/src/StyleAssets/variable';
+
+.client-section{
+    display: flex;
+    margin-top: 3rem;
+    .client-section-header{
+        width: 50%;
+        background: $bg-primary;
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+    }
+    .client-card-section{
+        width: 50%;
+        background: #ffecb9;
+    }
+    h1{
+        @include h1-l;
+        text-align: left
+    }
+    p{
+        @include p-l;
+    }
+    .header-wrapper{
+        width: max-content;
+    }
+    .client-card{
+        background: #fff;
+        max-width: 32rem;
+        padding: 2rem;
+        margin: 2rem 0;
+        position: relative;
+    }
+    .card-profile-section{
+        display: grid;
+        grid-template-columns: max-content auto;
+        grid-template-areas: "profile name"
+                             "profile designation";
+        grid-column-gap: 1rem;
+    }
+    .profile-img{
+        border-radius: 50%;
+        grid-area: profile;
+        width: 3rem;
+        height: 3rem;
+    }
+    .profile-name{
+        grid-area: name;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        justify-self: start;
+    }
+    .profile-designation{
+        grid-area: designation;
+        font-size: 14px;
+        line-height: 30px;
+        justify-self: start;
+    }
+    .client-card-description{
+        text-align: left;
+        margin-top: 4rem;
+    }
+    .quote-icon{
+        font-size: 3.5rem;
+        color: #ffecb9;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+}
+@media only screen and (max-width:1200px) {
+    .client-section{
+        .header-wrapper{
+            width: 100%;
+            p{
+                text-align: left;
+            }
+        }
+        .quote-icon{
+            font-size: 2rem;
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    .client-section{
+        flex-direction: column;
+        .client-card-section{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .client-section-header{
+            width: 100%;
+            padding: 3rem 1rem 4rem 1rem;
+        }
+        .header-wrapper{
+            h1,p{
+                text-align: center;
+                line-height: 20px;
+            }
+        }
+        .client-card {
+            padding: 2rem;
+            margin: -3rem 1rem 2rem 1rem;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .client-section{
+        .client-card{
+            padding: 1rem;
+        }
+        .profile-name{
+            font-size: 14px;
+        }
+        .profile-designation{
+            font-size: 11px;
+        }
+        .client-card-description{
+            margin-top: 1rem;
+        }
+        .quote-icon{
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.6rem;
+        }
+    }
+}

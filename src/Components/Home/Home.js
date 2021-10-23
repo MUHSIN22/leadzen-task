@@ -7,6 +7,8 @@ import RecommendSection from '../Recommend section/RecommendSection'
 import MeanSection from '../What mean page/MeanSection'
 import LeadGeneration from '../LeadGeneration/LeadGeneration';
 import TrustSection from '../Trust section/TrustSection'
+import ClientSection from '../Client setion/ClientSection'
+import Getstart from '../Getstart Section/Getstart'
 
 export default function Home() {
     return (
@@ -19,6 +21,8 @@ export default function Home() {
             <ExtensionSection/>
             <LeadGeneration/>
             <TrustSection/>
+            <ClientSection/>
+            <Getstart/>
         </main>
     )
 }
