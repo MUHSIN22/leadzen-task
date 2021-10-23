@@ -1,0 +1,30 @@
+@import '/src/StyleAssets/mixins';
+
+.trust-section{
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 2rem;
+    h1{
+        @include h1-l;
+        margin: 1rem;
+    }
+    .companies-slide-wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
+    .companies-slide{
+        width: 300%;
+        display: flex;
+    }
+
+}
+@media only screen and (max-width: 1050px){
+    .trust-section{
+        .companies-slide{
+            width: 500%;
+        }
+        img{
+            width: calc(100%/15)
+        }
+    }
+}
