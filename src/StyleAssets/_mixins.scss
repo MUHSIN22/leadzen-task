@@ -1,0 +1,26 @@
+@mixin h1-l {
+    font-size: 39.06px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    @media only screen and (max-width:800px) {
+        font-size: 28px;
+    }
+    @media only screen and (max-width:500px) {
+        font-size: 19px;
+    }
+}
+@mixin p-l{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    @media only screen and (max-width:800px) {
+        font-size: 15px;
+    }
+    @media only screen and (max-width:500px) {
+        font-size: 12px;
+    }
+}
