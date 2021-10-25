@@ -9,6 +9,7 @@ import LeadGeneration from '../LeadGeneration/LeadGeneration';
 import TrustSection from '../Trust section/TrustSection'
 import ClientSection from '../Client setion/ClientSection'
 import Getstart from '../Getstart Section/Getstart'
+import Footer from '../Footer/Footer'
 
 export default function Home() {
     return (
@@ -23,6 +24,7 @@ export default function Home() {
             <TrustSection/>
             <ClientSection/>
             <Getstart/>
+            <Footer/>
         </main>
     )
 }

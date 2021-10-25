@@ -15,6 +15,7 @@
     .companies-slide{
         width: 300%;
         display: flex;
+        animation: auto-slider 30s linear infinite;
     }
 
 }
@@ -26,5 +27,15 @@
         img{
             width: calc(100%/15)
         }
+    }
+}
+
+// Animation 
+@keyframes auto-slider {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -300%;
     }
 }

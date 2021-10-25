@@ -1,5 +1,6 @@
 .help-wrapper{
     margin-top: 4rem;
+    animation: move-to-right 0.5s ease;
     .help-contents{
         max-width: 800px;
         margin: auto;
@@ -63,5 +64,17 @@
         img{
             width: 50%;
         }
+    }
+}
+
+// Animations
+@keyframes move-to-right {
+    0%{
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
     }
 }

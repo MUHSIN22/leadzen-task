@@ -1,16 +1,14 @@
 import React from 'react'
 import './HelpWrapper.scss'
 
-export default function HelpWrapper() {
+export default function HelpWrapper({subHeading, description, image}) {
     return (
         <div className="help-wrapper">
             <div className="help-contents">
                 <h1>Leadzen.ai Can Help You</h1>
-                <h3>Do much more</h3>
-                <p>
-                    From skip tracing and identity resolution to due diligence, Lead-gen offers accurate, real-time data to meet all of your business needs. 
-                </p>
-                <img src="/images/help1.svg" alt="" />
+                <h3>{subHeading}</h3>
+                <p>{description}</p>
+                <img src= {image} alt="" />
             </div>          
         </div>
     )

@@ -22,6 +22,11 @@
                 color: #fff;
             }
         }
+        .btn-active{
+            background: $bg-primary;
+            border-color: $bg-primary;
+            color: #fff;
+        }
     }
     ul{
         display: none;

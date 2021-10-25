@@ -1,6 +1,7 @@
 @import '/src/StyleAssets/variable';
 .information-section{
     background: $bg-primary;
+    padding-bottom: 4rem;
     .information-section-wrapper{
         max-width: 1300px;
         display: flex;
@@ -21,8 +22,10 @@
         overflow: hidden;
     }
     .information-video-slide{
-        width: 500%;
+        width: 700%;
         display: flex;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        margin-left: -100%;
     }
     ul{
         list-style: none;
